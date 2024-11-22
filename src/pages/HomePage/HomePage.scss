@@ -1,2 +1,73 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
+.prompt {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: width 0.3s ease, border-radius 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+    top: 17.2rem; 
+    left: 65rem;  
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: rgba(49, 111, 246, 0.5);
+    animation: radiate 2s infinite;
+  }
+
+  &__logo {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 1s ease;
+
+    &:hover {
+      transform: rotate(360deg); 
+    }
+  }
+
+  &__text {
+    display: none;
+  }
+
+  &:hover {
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 1.5rem;
+    background-color: white;
+    justify-content: flex-start;
+    color: black;
+    border: solid 3px #316ff6;
+    padding: 0 0.1rem;
+
+    .prompt__text {
+      display: block;
+      margin: 0 1rem;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@keyframes radiate {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

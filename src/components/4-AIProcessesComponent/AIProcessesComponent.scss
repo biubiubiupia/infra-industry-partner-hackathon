@@ -1,5 +1,7 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
 
 html,
 body {
@@ -36,8 +38,9 @@ body {
 
   &__header {
     text-align: center;
-    padding: 1.25rem 0; 
+    padding: 0; 
     @include page-header;
+  
   }
 
   &__content {

@@ -3,42 +3,53 @@
 
 
 .component-header{
-  overflow-y: auto
+  overflow-y: auto;
 }
 
-  .button-group-left {
+.button-row{
     display: flex;
-    gap: 10px; 
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.button-group-left {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px; 
+}
+
+.meta-icon {
+  width: 50px;
+  align-self: center;
+  margin-right: 2rem;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  img {
+    width: 24px; 
+    height: 24px;
   }
+}
 
-  .header-content {
-    flex-grow: 1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header-content {
+  flex-grow: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 
-    h1 {
-      @include page-header;
-      color: black; 
-      margin: 0; 
-    }
+  h1 {
+    @include page-header;
+    color: black; 
+    margin: 0; 
   }
-
-  .header-button {
-    display: flex;
-    align-items: center;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-
-    img {
-      width: 24px; 
-      height: 24px;
-    }
-  }
-
-  .meta-icon {
-    width: 50px;
-  }
+}
 
 
