@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+
+  .button-group-left {
+    display: flex;
+    gap: 10px; 
+  }
+
+  .header-content {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 20px; 
+      color: black; 
+      margin: 0; 
+    }
+  }
+
+  .header-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    img {
+      width: 24px; 
+      height: 24px;
+    }
+  }
+
+  .meta-icon {
+    width: 50px;
+  }
+
+
