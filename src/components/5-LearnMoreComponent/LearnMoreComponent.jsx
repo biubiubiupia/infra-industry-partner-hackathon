@@ -19,16 +19,21 @@ export default function UsingAIOnFBComponent() {
 
   return (
     <div>
-      <ComponentHeader
-        onClose={handleClose}
-        onBack={handleBack}
-        onNext={handleNext}
-        showBack={true} 
-        showNext={true}
-      />
-      <div className="using-ai-fb-content">
-        <h1>Using AI on Facebook</h1>
+            <div className="welcome-container">
+
+       <div className="component-card">
+        <ComponentHeader
+          onClose={handleClose}
+          onBack={handleBack}
+          onNext={handleNext}
+          showBack={true}
+          showNext={true}
+        >
+          <h1>UsingAIOnFB</h1>
+          
+        </ComponentHeader>
       </div>
+    </div>
     </div>
   );
 }
