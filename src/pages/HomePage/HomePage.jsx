@@ -1,6 +1,6 @@
 import "./HomePage.scss"
 import React from 'react'
-import AILogo from "../../assets/"
+import AILogo from "../../assets/meta-ai-logo.png"
 
 export default function HomePage() {
   return (
@@ -8,8 +8,8 @@ export default function HomePage() {
       <div className="page__overlay">
         <div className="messenger">
           <button className="prompt">
-            <span><AILogo /></span>
-            <span className="button-text">Meta AI</span>
+            <img src={AILogo} alt="Meta AI Logo" className="prompt__logo"/>
+            <span className="prompt__text">Meta AI</span>
           </button>
         </div>
       </div>

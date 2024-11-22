@@ -47,9 +47,6 @@
       z-index: -1;
       transform: scale(1); 
       opacity: 1; 
-    }
-  
-    &:hover::after {
       animation: radiate 0.5s forwards; // Add forwards to persist the animation effect
     }
   
@@ -59,7 +56,18 @@
         opacity: 0;
       }
     }
-  }
+
+    &__logo {
+    width: 2rem;
+    height: 2rem;
+    position: center;
+    }
+
+    &__text {
+   display: none
+    }
+}
+
   
   
 
