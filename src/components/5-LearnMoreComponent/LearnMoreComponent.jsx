@@ -1,4 +1,5 @@
 import React from 'react';
+import "./LearnMoreComponent.scss"
 import { useNavigate } from 'react-router-dom';
 import ComponentHeader from '../0-ComponentHeader/ComponentHeader.jsx'
 
@@ -29,7 +30,7 @@ export default function LearnMoreComponent() {
           showBack={true}
           showNext={true}
         >
-          <h1>Learn More</h1>
+          <h1 className='welcome-container'>Learn More</h1>
           <div className="learn-more-content">
         <ul className="course-list">
           <li className="course-item">

@@ -9,8 +9,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.header-content {
+  display: flex;
+  align-items: stretch;
+  padding: 1rem 0;
+  flex-direction: column;
+}
+
 .welcome-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -25,6 +33,5 @@ body {
   height: 45rem;
   padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: stretch;
 }
