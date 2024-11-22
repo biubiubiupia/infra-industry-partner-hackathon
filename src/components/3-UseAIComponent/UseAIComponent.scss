@@ -1,5 +1,7 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
 
 html,
 body {
@@ -13,18 +15,92 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; 
   background-color: #f0f0f0;
 }
 
 .component-card {
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem; 
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); 
   width: 45rem;
   height: 45rem;
-  padding: 20px;
+  padding: 1.25rem; 
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+
+.cards {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    text-align: center;
+    padding: 0; 
+    @include page-header;
+  
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem; 
+    box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.2); 
+    padding: 0.9375rem; 
+    margin-bottom: 1.25rem; 
+    margin-top: 1.25rem; 
+    border-radius: 0.3125rem; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.625rem); 
+      box-shadow: 0 0.5rem 1rem 0.125rem rgba(0, 100, 224, 0.3); 
+    }
+  }
+
+  &__description {
+    flex-direction: column;
+  }
+
+  &__subheader {
+    @include sub-header;
+    margin-top: 0;
+    margin-bottom: 0.625rem; 
+    background: linear-gradient(90deg, #0064e0, #0082fb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__details {
+    @include body-medium;
+    margin: 0;
+  }
+
+  &__img {
+    height: 10.25rem; 
+    align-self: center;
+    width: 11.5rem; 
+    flex-shrink: 0;
+  }
+
+  &__subtitle {
+    color: #0082fb;
+    margin-top: 0.5rem; 
+    margin-bottom: 0.5rem; 
+    font-size: 0.875rem; 
+  }
+}
+
+li strong {
+  color: #0082fb;
+  margin-top: 0.5rem; 
+  margin-bottom: 0.5rem; 
+  font-size: 0.875rem; 
+}
+
+ul, li {
+  list-style-type: none;
 }
