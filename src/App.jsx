@@ -1,10 +1,9 @@
-import ""
-import './App.css'
+import './App.scss'
 import WelcomeComponent from './components/1-WelcomeComponent/WelcomeComponent'
 import IntroToAIComponent from './components/2-IntroToAIComponent/IntroToAIComponent'
 import UseAIComponent from './components/3-UseAIComponent/UseAIComponent'
 import AIProcessesComponent from './components/4-AIProcessesComponent/AIProcessesComponent'
-import LearnMoreComponent from "./components/5-LearnMoreComponent"
+import LearnMoreComponent from "./components/5-LearnMoreComponent/LearnMoreComponent"
 import CourseFeedbackComponent from './components/6-CourseFeedbackComponent/CourseFeedbackComponent'
 
 function App() {
