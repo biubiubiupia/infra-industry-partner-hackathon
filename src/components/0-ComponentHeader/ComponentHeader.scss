@@ -1,60 +1,55 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  .page-container {
+
+.component-header{
+  overflow-y: auto;
+}
+
+.button-row{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  
-    .component-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 36px;
-      background-color: $color-primary-white;
-      border-radius: 8px;
-      width: 45rem; 
-      height: 45rem; 
-  
-      .button-group-left {
-        display: flex;
-        gap: 10px; 
-      }
-  
-      .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1; 
-        text-align: center;
-  
-        .meta-logo {
-          width: 70px; 
-          height: 70px;
-        }
-      }
-  
-      .header-button {
-        display: flex;
-        align-items: center;
-        border: none;
-        background: transparent;
-        font-size: 16px;
-        cursor: pointer;
-  
-        img {
-          width: 16px;
-          height: 16px;
-        }
-      }
-    }
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.button-group-left {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px; 
+}
+
+.meta-icon {
+  width: 50px;
+  align-self: center;
+  margin-right: 2rem;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  img {
+    width: 24px; 
+    height: 24px;
   }
-  
-  
+}
+
+.header-content {
+  flex-grow: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+
+  h1 {
+    @include page-header;
+    color: black; 
+    margin: 0; 
+  }
+}
+
+

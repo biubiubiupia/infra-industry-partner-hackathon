@@ -1,33 +1,36 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import ComponentHeader from '../0-ComponentHeader/ComponentHeader';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import ComponentHeader from "../0-ComponentHeader/ComponentHeader";
 
 export default function IntroToAIComponent() {
   const navigate = useNavigate();
 
   const handleClose = () => {
-    navigate('/'); 
+    navigate("/");
   };
 
   const handleBack = () => {
-    navigate('/welcome');
+    navigate("/welcome");
   };
 
   const handleNext = () => {
-    navigate('/aiuse'); 
+    navigate("/aiuse");
   };
 
   return (
     <div>
-      <ComponentHeader
-        onClose={handleClose}
-        onBack={handleBack}
-        onNext={handleNext}
-        showBack={true} 
-        showNext={true}
-      />
-      <div className="intro-content">
-        <h1>Introduction to AI</h1>
+      <div className="welcome-container">
+        <div className="component-card">
+          <ComponentHeader
+            onClose={handleClose}
+            onBack={handleBack}
+            onNext={handleNext}
+            showBack={true}
+            showNext={true}
+          >
+            <h1>IntroToAIComponent</h1>
+          </ComponentHeader>
+        </div>
       </div>
     </div>
   );

@@ -19,14 +19,18 @@ export default function LearnMoreComponent() {
 
   return (
     <div>
-      <ComponentHeader
-        onClose={handleClose}
-        onBack={handleBack}
-        onNext={handleNext}
-        showBack={true}
-        showNext={true}
-      />
-      <div className="learn-more-content">
+            <div className="welcome-container">
+
+       <div className="component-card">
+        <ComponentHeader
+          onClose={handleClose}
+          onBack={handleBack}
+          onNext={handleNext}
+          showBack={true}
+          showNext={true}
+        >
+          <h1>Learn More</h1>
+          <div className="learn-more-content">
         <ul className="course-list">
           <li className="course-item">
             Responsible AI Use & Ethics
@@ -60,6 +64,10 @@ export default function LearnMoreComponent() {
           </li>
         </ul>
       </div>
+          
+        </ComponentHeader>
+      </div>
+    </div>
     </div>
   );
 }

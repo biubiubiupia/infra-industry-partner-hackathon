@@ -2,7 +2,7 @@ import React from "react";
 import closeIcon from "../../assets/icons/close.svg";
 import backArrowIcon from "../../assets/icons/back-arrow.svg";
 import forwardArrowIcon from "../../assets/icons/forward-arrow.svg";
-import metaIcon from '../../assets/icons/meta-icon.svg';
+import metaIcon from "../../assets/icons/meta-icon.svg";
 import './ComponentHeader.scss';
 
 export default function ComponentHeader({
@@ -11,10 +11,11 @@ export default function ComponentHeader({
   onNext,
   showBack,
   showNext,
+  children,
 }) {
   return (
-    <div className="page-container">
-      <div className="component-header">
+    <div className="component-header">
+      <div className="button-row">
         <div className="button-group-left">
           {showBack && onBack && (
             <button onClick={onBack} className="header-button back-button">
@@ -28,16 +29,18 @@ export default function ComponentHeader({
           )}
         </div>
 
-        <div className="logo-container">
-          <img src={metaIcon} alt="Logo" className="meta-logo" />
+        <div className="meta-icon-container">
+          <img src={metaIcon} alt="Meta Icon" className="meta-icon" />
         </div>
 
-        {onClose && (
-          <button onClick={onClose} className="header-button close-button">
-            <img src={closeIcon} alt="Close Icon" />
-          </button>
-        )}
+        <button onClick={onClose} className="header-button close-button">
+        <img src={closeIcon} alt="Close Icon" />
+        </button>
+
       </div>
+
+      <div className="header-content">{children}</div>
     </div>
   );
 }
+
