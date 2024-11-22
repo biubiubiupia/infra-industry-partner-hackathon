@@ -59,6 +59,14 @@ body {
     }
   }
 
+  &__image {
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.3125rem; 
+    height: 10rem;
+    object-fit: cover;
+  }
+
   &__subheader{
     @include sub-header;
     margin-top: 0;
@@ -69,7 +77,8 @@ body {
     -webkit-text-fill-color: transparent;
   }
 
-  &__paragraph {
+  &__paragrah {
     line-height: 1.5rem;
+    padding-top: 1rem;
   }
 }
