@@ -9,11 +9,19 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.header-content {
+  display: flex;
+  align-items: stretch;
+  padding: 1rem 0;
+  flex-direction: column;
+}
+
 .welcome-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
   background-color: #f0f0f0;
 }
 
@@ -25,6 +33,13 @@ body {
   height: 45rem;
   padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: stretch;
+}
+
+.course-item {
+  line-height: 2.5rem;
+}
+
+.learnmore {
+  line-height: 2rem;
 }
