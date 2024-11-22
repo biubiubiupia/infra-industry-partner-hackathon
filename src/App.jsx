@@ -4,7 +4,7 @@ import IntroToAIComponent from './components/2-IntroToAIComponent/IntroToAICompo
 import UseAIComponent from './components/3-UseAIComponent/UseAIComponent'
 import AIProcessesComponent from './components/4-AIProcessesComponent/AIProcessesComponent'
 import LearnMoreComponent from "./components/5-LearnMoreComponent/LearnMoreComponent"
-import CourseFeedbackComponent from './components/6-CourseFeedbackComponent/CourseFeedbackComponent'
+import Feedback from './pages/Feedback/Feedback'
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="/aiuse" element={<UseAIComponent/>} />
         <Route path="/aiprocesses" element={<AIProcessesComponent/>} />
         <Route path="/learnmore" element={<LearnMoreComponent/>} />
-        <Route path="/feedback" element={<CourseFeedbackComponent/>} />
+        <Route path="/feedback" element={<Feedback/>} />
       </Routes>
     </BrowserRouter>
   )

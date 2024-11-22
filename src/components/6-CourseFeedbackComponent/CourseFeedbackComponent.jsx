@@ -1,11 +1,11 @@
 
 
-import React from 'react'
-
-export default function CourseFeedbackComponent() {
+function CourseFeedbackComponent() {
   return (
     <div>
       
     </div>
   )
-}
+};
+
+export default CourseFeedbackComponent;
