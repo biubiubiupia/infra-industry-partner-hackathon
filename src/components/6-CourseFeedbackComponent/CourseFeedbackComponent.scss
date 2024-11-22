@@ -50,9 +50,9 @@ input, button {
 .survey-form {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 0.5rem;
     &__input {
-        border-radius: 1.25rem;
+        border-radius: 0.5rem;
         height: 3rem;
         width: 85%;
         padding-left: 1rem;
@@ -75,15 +75,16 @@ input, button {
         color: $color-primary-white;
         border-color: $fbBlue;
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         cursor: pointer;
         &:hover {
             border-color: darkblue;
             background-color: darkblue;
         }
     }
-    &__rateExperience {
+    &__rateExperience, &__rateNavigate {
         margin-top: 1rem;
     }
 }
+
 
