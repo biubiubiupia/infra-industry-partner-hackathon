@@ -1,8 +1,32 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import ComponentHeader from '../0-ComponentHeader/ComponentHeader';
 
+export default function CourseFeedbackComponent() {
+  const navigate = useNavigate();
 
-function CourseFeedbackComponent() {
+  const handleClose = () => {
+    navigate('/'); 
+  };
+
+  const handleBack = () => {
+    navigate('/learnmore'); 
+  };
+
+  const handleNext = () => {
+    alert('Hope you enjoyed the META tour!');
+  };
+
   return (
     <div className="page">
+      <ComponentHeader
+        onClose={handleClose}
+        onBack={handleBack}
+        onNext={handleNext}
+        showBack={true} 
+        showNext={false} 
+      />
+      <div>
       <h1>We'd love your feedback!</h1>
       <h2>Your feedback helps us improve and create more engaging experiences</h2>
       <form>
@@ -31,8 +55,9 @@ function CourseFeedbackComponent() {
         <label>How can we make this course better?</label>
         <button></button>
       </form>
+      </div>
+      
     </div>
-  )
-};
+  );
+}
 
-export default CourseFeedbackComponent;
