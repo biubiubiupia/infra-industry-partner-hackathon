@@ -1,2 +1,20 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
+
+*{
+    padding: 0rem;
+    margin: 0rem;
+}
+
+//reset form styling for actual styling
+form {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.survey {
+    &__title {
+        @include page-header;
+    }
+}
