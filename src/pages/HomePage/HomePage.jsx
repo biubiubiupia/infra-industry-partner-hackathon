@@ -1,18 +1,24 @@
-import "./HomePage.scss"
-import React from 'react'
-import AILogo from "../../assets/logos/meta-ai-logo.png"
+import "./HomePage.scss";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import AILogo from "../../assets/logos/meta-ai-logo.png";
 
 export default function HomePage() {
+
   return (
     <main className="page">
       <div className="page__overlay">
         <div className="messenger">
-          <button className="prompt">
-            <img src={AILogo} alt="Meta AI Logo" className="prompt__logo"/>
-            <span className="prompt__text">Explore Meta AI</span>
+          <NavLink to="/welcome">
+            <button className="prompt">
+            <img src={AILogo} alt="Meta AI Logo" className="prompt__logo" />
+            <p className="prompt__text">
+              Explore<br></br>Meta AI
+            </p>
           </button>
+          </NavLink>
         </div>
       </div>
     </main>
-  )
+  );
 }
