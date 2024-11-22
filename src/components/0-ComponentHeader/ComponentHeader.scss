@@ -1,60 +1,38 @@
 @use "../../styles/variables" as *;
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  .button-group-left {
+    display: flex;
+    gap: 10px; 
   }
-  
-  .page-container {
+
+  .header-content {
+    flex-grow: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  
-    .component-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 36px;
-      background-color: $color-primary-white;
-      border-radius: 8px;
-      width: 45rem; 
-      height: 45rem; 
-  
-      .button-group-left {
-        display: flex;
-        gap: 10px; 
-      }
-  
-      .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1; 
-        text-align: center;
-  
-        .meta-logo {
-          width: 70px; 
-          height: 70px;
-        }
-      }
-  
-      .header-button {
-        display: flex;
-        align-items: center;
-        border: none;
-        background: transparent;
-        font-size: 16px;
-        cursor: pointer;
-  
-        img {
-          width: 16px;
-          height: 16px;
-        }
-      }
+
+    h1 {
+      font-size: 20px; 
+      color: black; 
+      margin: 0; 
     }
   }
-  
-  
+
+  .header-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    img {
+      width: 24px; 
+      height: 24px;
+    }
+  }
+
+  .meta-icon {
+    width: 50px;
+  }
+
+

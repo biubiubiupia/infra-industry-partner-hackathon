@@ -19,16 +19,20 @@ export default function AIProcessesComponent() {
 
   return (
     <div>
-      <ComponentHeader
-        onClose={handleClose}
-        onBack={handleBack}
-        onNext={handleNext}
-        showBack={true} 
-        showNext={true} 
-      />
-      <div className="ai-processes-content">
-        <h1>AI Processes</h1>
+            <div className="welcome-container">
+     <div className="component-card">
+        <ComponentHeader
+          onClose={handleClose}
+          onBack={handleBack}
+          onNext={handleNext}
+          showBack={true}
+          showNext={true}
+        >
+          <h1>AIProcesses</h1>
+          
+        </ComponentHeader>
       </div>
+    </div>
     </div>
   );
 }

@@ -19,16 +19,20 @@ export default function UseAIComponent() {
 
   return (
     <div>
-      <ComponentHeader
-        onClose={handleClose}
-        onBack={handleBack}
-        onNext={handleNext}
-        showBack={true} 
-        showNext={true} 
-      />
-      <div className="use-content">
-        <h1>How to Use AI</h1>
+            <div className="welcome-container">
+      <div className="component-card">
+        <ComponentHeader
+          onClose={handleClose}
+          onBack={handleBack}
+          onNext={handleNext}
+          showBack={true}
+          showNext={true}
+        >
+          <h1>UseAIComponent</h1>
+          
+        </ComponentHeader>
       </div>
+    </div>
     </div>
   );
 }
