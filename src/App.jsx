@@ -1,4 +1,6 @@
 import './App.scss'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage/HomePage';
 import WelcomeComponent from './components/1-WelcomeComponent/WelcomeComponent'
 import IntroToAIComponent from './components/2-IntroToAIComponent/IntroToAIComponent'
 import UseAIComponent from './components/3-UseAIComponent/UseAIComponent'
@@ -18,7 +20,8 @@ function App() {
         <Route path="/aiprocesses" element={<AIProcessesComponent/>} />
         <Route path="/learnmore" element={<LearnMoreComponent/>} />
         <Route path="/feedback" element={<CourseFeedbackComponent/>} />
-      </Routes>
+        <Route path="*" element={<HomePage/>} />
+        </Routes>
     </BrowserRouter>
   )
 }
