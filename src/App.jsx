@@ -1,6 +1,6 @@
 import './App.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import HomePage from "./pages/HomePage/HomePage.jsx"
+import HomePage from './pages/HomePage/HomePage.jsx'
 import WelcomeComponent from './components/1-WelcomeComponent/WelcomeComponent.jsx'
 import IntroToAIComponent from './components/2-IntroToAIComponent/IntroToAIComponent.jsx'
 import UseAIComponent from './components/3-UseAIComponent/UseAIComponent.jsx'
@@ -12,9 +12,10 @@ function App() {
 
   return (
     <BrowserRouter>
+
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/welcome" element={<WelcomeComponent/>} />
+        <Route path="/welcome/*" element={<WelcomeComponent/>} />
         <Route path="/intro" element={<IntroToAIComponent/>} />
         <Route path="/aiuse" element={<UseAIComponent/>} />
         <Route path="/aiprocesses" element={<AIProcessesComponent/>} />
