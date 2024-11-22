@@ -1,4 +1,7 @@
 @use "../../styles/variables" as *;
+.component-header{
+  overflow-y: auto
+}
 
   .button-group-left {
     display: flex;
