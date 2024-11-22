@@ -5,6 +5,8 @@ import UseAIComponent from './components/3-UseAIComponent/UseAIComponent'
 import AIProcessesComponent from './components/4-AIProcessesComponent/AIProcessesComponent'
 import LearnMoreComponent from "./components/5-LearnMoreComponent/LearnMoreComponent"
 import Feedback from './pages/Feedback/Feedback'
+import HomePage from './pages/HomePage/HomePage'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
