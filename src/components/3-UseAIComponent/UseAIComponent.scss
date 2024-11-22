@@ -28,3 +28,33 @@ body {
   flex-direction: column;
   align-items: stretch;
 }
+
+.component-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.component-card h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #555;
+  @include sub-header;
+}
+
+.component-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  @include body-small;
+}
+
+.component-card ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.component-card li {
+  margin-bottom: 5px;
+  @include body-small;
+}
