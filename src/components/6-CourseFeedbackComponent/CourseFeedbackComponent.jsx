@@ -19,16 +19,20 @@ export default function CourseFeedbackComponent() {
 
   return (
     <div>
-      <ComponentHeader
-        onClose={handleClose}
-        onBack={handleBack}
-        onNext={handleNext}
-        showBack={true} 
-        showNext={false} 
-      />
-      <div className="feedback-content">
-        <h1>Course Feedback</h1>
+            <div className="welcome-container">
+       <div className="component-card">
+        <ComponentHeader
+          onClose={handleClose}
+          onBack={handleBack}
+          onNext={handleNext}
+          showBack={true}
+          showNext={true}
+        >
+          <h1>Feedback</h1>
+          
+        </ComponentHeader>
       </div>
+    </div>
     </div>
   );
 }
