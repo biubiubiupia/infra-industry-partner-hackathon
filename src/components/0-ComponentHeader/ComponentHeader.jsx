@@ -15,23 +15,28 @@ export default function ComponentHeader({
 }) {
   return (
     <div className="component-header">
-      <div className="button-group-left">
-        {showBack && onBack && (
-          <button onClick={onBack} className="header-button back-button">
-            <img src={backArrowIcon} alt="Back Icon" />
-          </button>
-        )}
-        {showNext && onNext && (
-          <button onClick={onNext} className="header-button next-button">
-            <img src={forwardArrowIcon} alt="Forward Icon" />
-          </button>
-        )}
-         <div className="meta-icon-container">
+      <div className="button-row">
+        <div className="button-group-left">
+          {showBack && onBack && (
+            <button onClick={onBack} className="header-button back-button">
+              <img src={backArrowIcon} alt="Back Icon" />
+            </button>
+          )}
+          {showNext && onNext && (
+            <button onClick={onNext} className="header-button next-button">
+              <img src={forwardArrowIcon} alt="Forward Icon" />
+            </button>
+          )}
+        </div>
+
+        <div className="meta-icon-container">
           <img src={metaIcon} alt="Meta Icon" className="meta-icon" />
         </div>
+
         <button onClick={onClose} className="header-button close-button">
         <img src={closeIcon} alt="Close Icon" />
-      </button>
+        </button>
+
       </div>
 
       <div className="header-content">{children}</div>

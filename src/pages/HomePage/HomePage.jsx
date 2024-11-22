@@ -6,8 +6,7 @@ import AILogo from "../../assets/logos/meta-ai-logo.png";
 export default function HomePage() {
 
   return (
-    <main className="page">
-      <div className="page__overlay">
+    <main className="homepage">
         <div className="messenger">
           <NavLink to="/welcome">
             <button className="prompt">
@@ -18,7 +17,6 @@ export default function HomePage() {
           </button>
           </NavLink>
         </div>
-      </div>
     </main>
   );
 }
