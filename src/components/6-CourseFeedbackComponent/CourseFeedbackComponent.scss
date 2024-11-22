@@ -13,8 +13,32 @@ form {
     border: none;
 }
 
-.survey {
-    &__title {
-        @include page-header;
+input, button {
+    margin: 0;
+    padding: 0;
+    border: $cloud .0625rem solid;
+    font: inherit;  
+    background: none; 
+    outline: none; 
+    box-shadow: none; 
+    &:active {
+        border-color: $fbBlue;
     }
 }
+
+.survey-form {
+    &__button {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        column-gap: 1rem;
+        background-color: $fbBlue;
+        color: $color-primary-white;
+        font-weight: 800;
+        &:hover {
+            border-color: darkblue;
+            background-color: darkblue;
+        }
+    }
+}
+
