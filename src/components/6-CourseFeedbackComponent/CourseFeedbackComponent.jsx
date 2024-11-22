@@ -57,11 +57,11 @@ export default function CourseFeedbackComponent() {
 
     const validateForm = () => {
         const newErrors = {};
-        if (!ratings.questionOne) newErrors.questionOne = "Please rate your overall experience of the course.";
-        if (!ratings.questionTwo) newErrors.questionTwo = "Please rate your experience with navigating the course pages.";
-        if (!responses.questionThree.trim()) newErrors.questionThree = "Please answer what surprised you about AI.";
-        if (!responses.questionFour.trim()) newErrors.questionFour = "Please answer what features of AI you want to explore further.";
-        if (!responses.questionFive.trim()) newErrors.questionFive = "Please provide feedback on how we can improve the course.";
+        if (!ratings.questionOne) newErrors.questionOne = "Please rate your overall experience of the course!";
+        if (!ratings.questionTwo) newErrors.questionTwo = "Please rate your experience with navigating the course pages!";
+        if (!responses.questionThree.trim()) newErrors.questionThree = "Please answer what surprised you about AI!";
+        if (!responses.questionFour.trim()) newErrors.questionFour = "Please answer what features of AI you want to explore further!";
+        if (!responses.questionFive.trim()) newErrors.questionFive = "Please provide feedback on how we can improve the course!";
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -73,6 +73,7 @@ export default function CourseFeedbackComponent() {
             console.log("Ratings:", ratings);
             console.log("Responses:", responses);
             alert("Thank you for your feedback!");
+            navigate("/");
         }
     };
 
@@ -89,7 +90,7 @@ export default function CourseFeedbackComponent() {
                     <div className="survey">
                         <h2 className="survey__title">We'd love your feedback!</h2>
                         <h3 className="survey__subtitle">
-                            Your feedback helps us improve and create more engaging experiences
+                            Your feedback helps us improve and create more engaging experiences.
                         </h3>
                         <form className="survey-form" onSubmit={handleSubmit}>
                             <div className="survey-form__rateExperience">
@@ -112,7 +113,7 @@ export default function CourseFeedbackComponent() {
                                 {errors.questionOne && <p className="error">{errors.questionOne}</p>}
                             </div>
                             <div className="survey-form__rateNavigate">
-                                <p>Rate your experience with navigating the course pages</p>
+                                <p className="survey-form__label">Rate your experience with navigating the course pages</p>
                                 {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
                                     <label key={num} for={`question-two-${num}`}>
                                         {num}

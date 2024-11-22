@@ -25,20 +25,61 @@ input, button {
         border-color: $fbBlue;
     }
 }
-
+.error {
+    display: flex;
+    align-items: center;
+    font-size: .75rem;
+    color: red;
+    @include body-small;
+}
+.survey {
+    padding: 1rem;
+    &__title {
+        @include page-header;
+        margin-bottom: 0.5rem;
+    }
+    &__subtitle {
+        @include body-large;
+        font-style: italic;
+    }
+}
 .survey-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    &__input {
+        border-radius: 1.25rem;
+        height: 3rem;
+        width: 85%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-color: $cloud;
+        color: $slate;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+    &__label {
+        margin-bottom: .25rem;
+        @include buttons-labels;
+    }
     &__button {
-        display: flex;
-        justify-content: center;
-        padding: 1rem 1.5rem;
-        column-gap: 1rem;
+        height: 2.25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 1.25rem;
         background-color: $fbBlue;
         color: $color-primary-white;
-        font-weight: 800;
+        border-color: $fbBlue;
+        width: 100%;
+        margin-top: 1rem;
+        cursor: pointer;
         &:hover {
             border-color: darkblue;
             background-color: darkblue;
         }
+    }
+    &__rateExperience {
+        margin-top: 1rem;
     }
 }
 
