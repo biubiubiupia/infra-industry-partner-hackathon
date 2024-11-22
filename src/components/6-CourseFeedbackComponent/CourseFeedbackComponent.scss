@@ -37,10 +37,14 @@ input, button {
     &__title {
         @include page-header;
         margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: center;
     }
     &__subtitle {
         @include body-large;
         font-style: italic;
+        display: flex;
+        justify-content: center;
     }
 }
 .survey-form {
