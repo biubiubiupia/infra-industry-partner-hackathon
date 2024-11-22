@@ -24,17 +24,27 @@
 }
 
 .prompt {
-    width: 2.8125rem;
-    height: 2.8125rem;
-    border: solid 3px #316ff6;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    cursor: pointer;
+  width: 2rem;
+  height: 2.5rem;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: width 0.3s ease, border-radius 0.3s ease; // Smooth expansion effect
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: visible;
+  margin: 20rem;
+
+  &__logo {
+    width: 2rem;
+    height: 2rem;
     position: relative;
-    margin: 20rem;
-    overflow: visible; 
-  
+    transition: transform 1s ease; // Smooth rotation
+    overflow: visible;
+
     &::after {
       content: "";
       position: absolute;
@@ -42,32 +52,43 @@
       left: 0;
       right: 0;
       bottom: 0;
-      border-radius: 0.9375rem;
-      background: rgba(49, 111, 246, 0.5); // Add background for visibility
+      border-radius: 50%;
+      background: #316ff680;
       z-index: -1;
-      transform: scale(1); 
-      opacity: 1; 
-      animation: radiate 0.5s forwards; // Add forwards to persist the animation effect
-    }
-  
-    @keyframes radiate {
-      to {
-        transform: scale(1.5);
-        opacity: 0;
-      }
+      transform: scale(1);
+      opacity: 1;
+      animation: radiate 2s infinite;
     }
 
-    &__logo {
-    width: 2rem;
-    height: 2rem;
-    position: center;
+    &:hover {
+      transform: rotate(360deg); // Rotate the logo on hover
     }
+  }
+
+  &__text {
+    color: black;
+    display: none;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    width: 8rem;
+    border-radius: 1.5rem;
+    background-color: white;
+    color: black;
+    border: solid 3px #316ff6;
 
     &__text {
-   display: none
+      display: block;
     }
+  }
 }
 
-  
-  
-
+@keyframes radiate {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
