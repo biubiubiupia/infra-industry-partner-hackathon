@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
   background-color: #f0f0f0;
 }
 
@@ -34,4 +34,12 @@ body {
   padding: 20px;
   display: flex;
   align-items: stretch;
+}
+
+.course-item {
+  line-height: 2.5rem;
+}
+
+.learnmore {
+  line-height: 2rem;
 }
