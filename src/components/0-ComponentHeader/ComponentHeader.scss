@@ -1,4 +1,10 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+
+.component-header{
+  overflow-y: auto
+}
 
   .button-group-left {
     display: flex;
@@ -12,7 +18,7 @@
     align-items: center;
 
     h1 {
-      font-size: 20px; 
+      @include page-header;
       color: black; 
       margin: 0; 
     }
