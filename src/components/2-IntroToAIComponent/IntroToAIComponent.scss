@@ -1,5 +1,7 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
+@use "../../styles/global" as *;
+
 
 html,
 body {
@@ -20,11 +22,54 @@ body {
 .component-card {
   background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 45rem;
   height: 45rem;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+
+.cards__header {
+  margin-bottom: 2rem;
+}
+
+.intro {
+  &__box {
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 5%;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+
+  &__card{
+    border-radius: 0.3125rem; 
+    width: 45%;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+    &:hover{
+      transform: translateY(-0.625rem); 
+      box-shadow: 0 0.5rem 1rem 0.125rem rgba(0, 100, 224, 0.3); 
+    }
+  }
+
+  &__subheader{
+    @include sub-header;
+    margin-top: 0;
+    margin-bottom: 0.625rem; 
+    align-self: center;
+    background: linear-gradient(90deg, #0064e0, #0082fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__paragraph {
+    line-height: 1.5rem;
+  }
 }
