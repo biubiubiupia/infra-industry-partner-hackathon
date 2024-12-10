@@ -6,7 +6,6 @@
     margin: 0rem;
 }
 
-//reset form styling for actual styling
 form {
     margin: 0;
     padding: 0;
@@ -25,6 +24,7 @@ input, button {
         border-color: $fbBlue;
     }
 }
+
 .error {
     display: flex;
     align-items: center;
@@ -32,14 +32,17 @@ input, button {
     color: red;
     @include body-small;
 }
+
 .survey {
     padding: 1rem;
+
     &__title {
         @include page-header;
         margin-bottom: 0.5rem;
         display: flex;
         justify-content: center;
     }
+
     &__subtitle {
         @include body-large;
         font-style: italic;
@@ -47,14 +50,16 @@ input, button {
         justify-content: center;
     }
 }
+
 .survey-form {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+
     &__input {
         border-radius: 0.5rem;
         height: 3rem;
-        width: 85%;
+        width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
         border-color: $cloud;
@@ -62,10 +67,12 @@ input, button {
         font-weight: 400;
         margin-bottom: 1rem;
     }
+
     &__label {
-        margin-bottom: .25rem;
+        margin-bottom: 0.25rem;
         @include buttons-labels;
     }
+
     &__button {
         height: 2.25rem;
         padding-left: 1rem;
@@ -77,14 +84,40 @@ input, button {
         width: 100%;
         margin-top: 0.5rem;
         cursor: pointer;
+
         &:hover {
             border-color: darkblue;
             background-color: darkblue;
         }
     }
+
     &__rateExperience, &__rateNavigate {
         margin-top: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+
+        p {
+            margin-bottom: 0.5rem; 
+        }
+
+        .number-container {
+            display: flex; 
+            justify-content: space-between; 
+            width: 100%; 
+
+            label {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 0.5rem; 
+                font-size: 0.875rem; 
+            }
+
+            input {
+                margin-top: 0.25rem; 
+            }
+        }
     }
 }
-
-

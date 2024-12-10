@@ -103,32 +103,42 @@ export default function CourseFeedbackComponent() {
               </h3>
               <form className="survey-form" onSubmit={handleSubmit}>
                 <div className="survey-form__rateExperience">
-                  <p className="survey-form__label">
-                    Rate your overall experience of the course
-                  </p>
-                  {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
-                    <label key={num} for={`question-one-${num}`}>
-                      {num}
-                      <input
-                        type="radio"
-                        name="question-one"
-                        id={`question-one-${num}`}
-                        value={num}
-                        onChange={(e) =>
-                          handleRatingChange("questionOne", e.target.value)
-                        }
-                        required
-                      />
-                    </label>
-                  ))}
-                  {errors.questionOne && (
-                    <p className="error">{errors.questionOne}</p>
-                  )}
+                  <div className="survey-form__rateExperience">
+                    <p className="survey-form__label">
+                      Rate your overall experience of the course
+                    </p>
+                    <div className="number-container">
+                      {Array.from({ length: 10 }, (_, i) => i + 1).map(
+                        (num) => (
+                          <label key={num} for={`question-one-${num}`}>
+                            {num}
+                            <input
+                              type="radio"
+                              name="question-one"
+                              id={`question-one-${num}`}
+                              value={num}
+                              onChange={(e) =>
+                                handleRatingChange(
+                                  "questionOne",
+                                  e.target.value
+                                )
+                              }
+                              required
+                            />
+                          </label>
+                        )
+                      )}
+                    </div>
+                    {errors.questionOne && (
+                      <p className="error">{errors.questionOne}</p>
+                    )}
+                  </div>
                 </div>
                 <div className="survey-form__rateNavigate">
                   <p className="survey-form__label">
                     Rate your experience with navigating the course pages
                   </p>
+                  <div className="number-container">
                   {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
                     <label key={num} for={`question-two-${num}`}>
                       {num}
@@ -144,6 +154,7 @@ export default function CourseFeedbackComponent() {
                       />
                     </label>
                   ))}
+                  </div>
                   {errors.questionTwo && (
                     <p className="error">{errors.questionTwo}</p>
                   )}
