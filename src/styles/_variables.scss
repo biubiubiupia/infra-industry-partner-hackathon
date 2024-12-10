@@ -1,5 +1,11 @@
 @use 'sass:color';
 
+//Breakpoints
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+// Font Family
 
 @font-face {
   font-family: Arial, Helvetica, sans-serif;
